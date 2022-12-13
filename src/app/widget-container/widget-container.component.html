@@ -1,0 +1,13 @@
+<div class="container">
+
+  <app-widget [widget]="widget" *ngFor="let widget of widgetService.widgets">
+
+  </app-widget>
+
+  <mat-card style="cursor: pointer;" (click)="openAddModal()">
+    <mat-card-content>
+      <mat-icon color="accent" class="bigger">add</mat-icon>
+    </mat-card-content>
+  </mat-card>
+
+</div>

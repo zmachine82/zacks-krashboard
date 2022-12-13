@@ -1,0 +1,21 @@
+<form [formGroup]="newWidgetForm" (ngSubmit)="submit()">
+  <mat-form-field>
+    <mat-label>Widget Name</mat-label>
+    <input matInput type="text" formControlName="name">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>API url</mat-label>
+    <input matInput type="text" formControlName="url">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Response path</mat-label>
+    <input matInput type="text" formControlName="path">
+  </mat-form-field>
+
+  <div class="buttons">
+    <button mat-dialog-close="" mat-flat-button [color]="'warning'">Cancel</button>
+    <button [disabled]="newWidgetForm.invalid" type="submit" mat-flat-button [color]="'primary'">Submit</button>
+  </div>
+</form>

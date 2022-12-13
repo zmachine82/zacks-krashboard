@@ -1,0 +1,14 @@
+mat-card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 240px;
+  overflow: auto;
+  flex-direction: column;
+}
+mat-card {
+  padding: 0;
+}
+h2 {
+  text-align: center;
+}

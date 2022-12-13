@@ -1,0 +1,27 @@
+<mat-card *ngIf="widget">
+  <mat-toolbar color="accent">
+    <mat-card-title>
+      {{widget.name}}
+
+
+    </mat-card-title>
+  </mat-toolbar>
+
+
+  <mat-card-content>
+    <div *ngIf="!result && !loading">
+      no data found
+    </div>
+
+    <h2 *ngIf="result">
+      {{result | json}}
+    </h2>
+
+    <mat-spinner color="accent" *ngIf="loading"></mat-spinner>
+
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button color="warning" mat-button (click)="loadData()"><mat-icon>refresh</mat-icon></button>
+    <button color="warn" mat-button (click)="widgetService.deleteWidget(widget)">Delete</button>
+  </mat-card-actions>
+</mat-card>
